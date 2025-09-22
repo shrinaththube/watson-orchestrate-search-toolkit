@@ -5,7 +5,7 @@
 ### Step 1: Clone Repository
 ```bash
 git clone https://github.com/yourusername/watson-orchestrate-search-tool
-cd watson-orchestrate-search-tool/
+cd watson-orchestrate-search-tool/google-search-tool/
 ```
 
 ### Step 2: Get Your Credentials
