@@ -10,7 +10,7 @@ from typing import List, Dict, Any
     description='Premium web search using Google Custom Search. Uses secure credential management.',
     permission=ToolPermission.READ_ONLY,
     expected_credentials=[{
-        "app_id": "google_search_api", 
+        "app_id": "google_search_api_credentials", 
         "type": ConnectionType.KEY_VALUE
     }]
 )
@@ -30,7 +30,7 @@ def google_search(query: str, num_results: int = 10) -> List[Dict[str, Any]]:
     """
     try:
         # Access credentials from secure connection
-        conn = connections.key_value("google_search_api")
+        conn = connections.key_value("google_search_api_credentials")
         GOOGLE_API_KEY = conn["GOOGLE_API_KEY"]
         GOOGLE_SEARCH_ENGINE_ID = conn["GOOGLE_SEARCH_ENGINE_ID"]
         
